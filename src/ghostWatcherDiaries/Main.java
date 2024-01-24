@@ -380,40 +380,7 @@ public class Main implements Runnable{
 		
 		System.out.print("]");
 		System.out.println();
-		System.out.print(greenLine);
-		System.out.print("Loading Dialogues:[");
-		for(int i=0;i<50;i++) {
-			
-			
-			System.out.print("\u25A0");
-			
-			try {
-				Thread.sleep(1);
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-		}
-		
-		System.out.print("]");
-		System.out.println();
-		System.out.print(greenLine);
-		System.out.print("Testing Patience: [");
-		for(int i=0;i<50;i++) {
-			
-			
-			System.out.print("\u25A0");
-			
-			try {
-				Thread.sleep(1);
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-		}
-		
-		System.out.print("]");
-		System.out.println();
+
 		System.out.print("Starting Program: [");
 		for(int i=0;i<50;i++) {
 			
