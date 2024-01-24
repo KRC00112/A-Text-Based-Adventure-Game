@@ -7,11 +7,11 @@ import roughTest.LoadingBarRunnable;
 
 public class Main implements Runnable{
 	
-	final static String redLine="\u001B[31m";
+	public final static String redLine="\u001B[31m";
 	
-	final static String resetColor="\u001B[0m";
+	public final static String resetColor="\u001B[0m";
 	
-	final static String greenLine="\u001B[32m";
+	public final static String greenLine="\u001B[32m";
 	
 	static int a,b,c,d,e;
 	static String name="";
