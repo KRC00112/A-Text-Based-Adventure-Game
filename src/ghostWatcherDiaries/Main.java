@@ -219,7 +219,7 @@ public class Main implements Runnable{
 		talkToBartley();
 		
 		
-		help(2,1);
+		help(1,1);//description influences every other command, to change desc change the first parameter.
 		//status in any case might always be passed as 1 whenever called as an argument.not sure but might be that updating HP should be more than enough
 	
 
