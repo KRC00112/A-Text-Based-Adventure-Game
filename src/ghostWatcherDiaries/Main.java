@@ -219,7 +219,7 @@ public class Main implements Runnable{
 		talkToBartley();
 		
 		
-		help(1,1,1,1,1);
+		help(2,1);
 		//status in any case might always be passed as 1 whenever called as an argument.not sure but might be that updating HP should be more than enough
 	
 
@@ -230,7 +230,7 @@ public class Main implements Runnable{
 	
 	
 	
-	public static void help(int a,int b,int c,int d,int e) {
+	public static void help(int a,int b) {
 		
 		do {
 		System.out.println("Enter [Help] for further assistance");
@@ -257,12 +257,12 @@ public class Main implements Runnable{
 			scanner.nextLine();
 		}
 		else if(help.equalsIgnoreCase("status")) {
-			new HelpClass().status(c);
+			new HelpClass().status();
 			System.out.println("\npress [enter] to continue ");
 			scanner.nextLine();
 		}
 		else if(help.equalsIgnoreCase("talk")) {
-			new HelpClass().talk(d);
+			new HelpClass().talk();
 			System.out.print(greenLine+">>> ");
 
 			String talkTo=scanner.nextLine();
@@ -282,6 +282,9 @@ public class Main implements Runnable{
 			
 			
 			
+			
+			
+			
 			System.out.println("\npress [enter] to continue ");
 			scanner.nextLine();
 			
@@ -289,7 +292,7 @@ public class Main implements Runnable{
 			
 		}
 		else if(help.equalsIgnoreCase("interact")) {
-			new HelpClass().interact(e);
+			new HelpClass().interact();
 			System.out.print(greenLine+">>> ");
 
 			String use=scanner.nextLine();

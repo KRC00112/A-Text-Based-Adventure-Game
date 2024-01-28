@@ -21,6 +21,8 @@ public class HelpClass {
 	static String[] descArray;
 	static Set<String> wordSet;
 	
+	static int c;
+	
 	HelpClass(){
 		
 		
@@ -78,10 +80,12 @@ public class HelpClass {
 			
 		}
 		if(a==2) {
-			desc="222";
+			desc="qwe joey television richard";
 			
 		}
 		
+		
+		c=a;
 		
 		descLower=desc.toLowerCase();
 		
@@ -96,9 +100,8 @@ public class HelpClass {
 
 	
 	}
-	public void status(int a) {
+	public void status() {
 		
-		this.a=a;
 		System.out.println("");
 		System.out.println("Player Status:\n ");
 		System.out.println(new Main().name);
@@ -115,11 +118,11 @@ public class HelpClass {
 
 
 		
-		if(a==1) {
+		
 			
 			System.out.println("HP: 120");
 			
-		}
+		
 	
 	}
 	public void inventory(int a) {
@@ -133,16 +136,17 @@ public class HelpClass {
 		}
 	
 	}
-	public void talk(int a) {
+	public void talk() {
 		
 		int talkIndex=1;
 		this.a=a;
+
 		
 		
-		if(a==1) {
+//		if(a==1) {
 			System.out.println("Talk to...");
 			
-			description(1);
+			description(c);
 			for(int i=0;i<descArray.length;i++) {
 				
 				wordSet.add(descArray[i]);
@@ -168,19 +172,19 @@ public class HelpClass {
 			
 			
 			
-		}
+//		}
 	
 	}
-	public void interact(int a) {
+	public void interact() {
 		
 		int talkIndex=1;
 		this.a=a;
 		
 		
-		if(a==1) {
+//		if(a==1) {
 			System.out.println("Interact with...");
 			
-			description(1);
+			description(c);
 			for(int i=0;i<descArray.length;i++) {
 				
 				wordSet.add(descArray[i]);
@@ -206,7 +210,7 @@ public class HelpClass {
 			
 			
 			
-		}
+//		}
 	
 	}
 	
