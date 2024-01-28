@@ -59,7 +59,8 @@ public class Main implements Runnable{
 		
 		System.out.println("________________________________________________________________________________________________________");
 		System.out.println(programName);
-		System.out.println("\n\n Version 1.0                                     A Text based Adventure Game by Kaustav Raj Chakraborty");
+		System.out.println("                          A text based adventure written in Java                                       ");
+		System.out.println("\n\n Version 1.0                                                               By Kaustav Raj Chakraborty");
 		System.out.println("________________________________________________________________________________________________________\n");
 		//Designing Header ends
 
