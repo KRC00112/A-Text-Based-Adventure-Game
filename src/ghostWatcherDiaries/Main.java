@@ -250,6 +250,7 @@ public class Main implements Runnable{
 		}
 		else if(help.equalsIgnoreCase("inventory")) {
 			new HelpClass().inventory(b);
+			
 			System.out.println("\npress [enter] to continue ");
 			scanner.nextLine();
 		}
@@ -262,12 +263,11 @@ public class Main implements Runnable{
 			new HelpClass().talk(d);
 			System.out.print(greenLine+">>> ");
 
-			int talkTo=scanner.nextInt();
-			scanner.nextLine();
+			String talkTo=scanner.nextLine();
 			System.out.println(resetColor);
 
 			
-			if(talkTo==1) {
+			if(talkTo.equalsIgnoreCase("Bartley")) {
 			
 			
 			
@@ -288,6 +288,25 @@ public class Main implements Runnable{
 		}
 		else if(help.equalsIgnoreCase("interact")) {
 			new HelpClass().interact(e);
+			System.out.print(greenLine+">>> ");
+
+			String use=scanner.nextLine();
+			System.out.println(resetColor);
+
+			
+//			if(use.equalsIgnoreCase("pen")) {
+//			
+//			
+//			
+//			
+//				usePen();
+//				
+//				
+//			
+//			}
+			
+
+			
 			System.out.println("\npress [enter] to continue ");
 			scanner.nextLine();
 		}

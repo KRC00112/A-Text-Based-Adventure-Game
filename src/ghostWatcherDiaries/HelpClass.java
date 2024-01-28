@@ -1,6 +1,8 @@
 package ghostWatcherDiaries;
 
+import java.util.HashSet;
 import java.util.Scanner;
+import java.util.Set;
 
 public class HelpClass {
 	
@@ -10,6 +12,14 @@ public class HelpClass {
 	String person;
 	String interact;
 	Scanner scanner=new Scanner(System.in);
+	
+	static String[] people= {"michael","richard","kevin","bartley","sarah","Joey","garnt","grant"};
+ 	static String[] objects= {"pen","drugs","television"};
+
+	
+	static String descLower;
+	static String[] descArray;
+	static Set<String> wordSet;
 	
 	HelpClass(){
 		
@@ -55,14 +65,14 @@ public class HelpClass {
 		
 		if(a==1) {
 			
-			desc="you are sitting in the office. A clear "
+			desc="you are sitting in the office . A clear "
 					+ "white room \nwith no visible signs of exit in your "
-					+ "view.It has only \ngot two chairs facing one another "
+					+ "view . It has only \ngot two chairs facing one another "
 					+ "and a desk placed \nin between the two.You are sitting "
 					+ "in one while Bartley ,\noccupies the other.In the desk "
-					+ "you see a Bonsai tree, \na pen, a coffee cup made out of "
+					+ "you see a Bonsai tree , \na pen , a coffee cup made out of "
 					+ "plastic filled to the \nbrim with hot coffee,some papers "
-					+ "that look official but \nwith no known government insignia on them. ";
+					+ "that look official but \nwith no known government insignia on them. Joey drugs pen ";
 			
 							
 			
@@ -73,26 +83,11 @@ public class HelpClass {
 		}
 		
 		
-		String descArr[]=desc.split(" ");
+		descLower=desc.toLowerCase();
 		
-		for(int i=0;i<descArr.length;i++) {
-			
-			if(descArr[i].equalsIgnoreCase("bartley")) {
-				person="Bartley";
-	
-
-				
-			
-				
-				
-			}
+		descArray=descLower.split(" ");
 		
-			
-			
-			
-			
-			
-		}
+		wordSet=new HashSet<>();
 		return desc;
 		
 		
@@ -140,6 +135,7 @@ public class HelpClass {
 	}
 	public void talk(int a) {
 		
+		int talkIndex=1;
 		this.a=a;
 		
 		
@@ -147,7 +143,28 @@ public class HelpClass {
 			System.out.println("Talk to...");
 			
 			description(1);
-			System.out.println(person);
+			for(int i=0;i<descArray.length;i++) {
+				
+				wordSet.add(descArray[i]);
+			}
+			
+			
+	        String[] uniqueWords = wordSet.toArray(new String[0]);
+		
+			for(int i=0;i<uniqueWords.length;i++) {
+				
+				
+				for(int k=0;k<people.length;k++) {
+					
+					if(people[k].equalsIgnoreCase(uniqueWords[i])) {
+						
+						
+							System.out.println(talkIndex+". "+people[k].substring(0, 1).toUpperCase()+""+people[k].substring(1,people[k].length()));
+							talkIndex++;
+						
+						}	
+					}	
+				}
 			
 			
 			
@@ -156,11 +173,38 @@ public class HelpClass {
 	}
 	public void interact(int a) {
 		
+		int talkIndex=1;
 		this.a=a;
 		
 		
 		if(a==1) {
 			System.out.println("Interact with...");
+			
+			description(1);
+			for(int i=0;i<descArray.length;i++) {
+				
+				wordSet.add(descArray[i]);
+			}
+			
+			
+	        String[] uniqueWords = wordSet.toArray(new String[0]);
+		
+			for(int i=0;i<uniqueWords.length;i++) {
+				
+				
+				for(int k=0;k<objects.length;k++) {
+					
+					if(objects[k].equalsIgnoreCase(uniqueWords[i])) {
+						
+						
+							System.out.println(talkIndex+". "+objects[k]);
+							talkIndex++;
+						
+						}	
+					}	
+				}
+			
+			
 			
 		}
 	

@@ -6,7 +6,7 @@ import java.util.Set;
 
 public class HashAndWhatever {
 	
-    	static String[] people= {"michael","richard","kevin","sarah","Joey","garnt"};
+    	static String[] people= {"michael","richard","kevin","sarah","Joey","garnt","grant"};
 	
 	 	static String[] objects= {"pen","drugs","television"};
 	 	
@@ -23,7 +23,7 @@ public class HashAndWhatever {
 			+ "\nin a late-night television show , flipping"
 			+ "\nchannels to find something captivating ."
 			+ "\nLittle did he know that across town , a"
-			+ "\nmysterious figure was plotting to smuggle"
+			+ "\nmysterious figure was plotting Grant to smuggle"
 			+ "\nillegal drugs into the city , disrupting the"
 			+ "\npeace that King Richard sought to maintain ."
 			+ "\nThe city's fate hung in the balance , as the"
