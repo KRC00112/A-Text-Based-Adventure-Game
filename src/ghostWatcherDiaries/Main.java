@@ -24,6 +24,7 @@ public class Main implements Runnable{
 	static int choose = 0;
 
 	
+	static boolean descV=false;
 	
 	
 	static Scanner scanner=new Scanner(System.in);
@@ -244,6 +245,8 @@ public class Main implements Runnable{
 		}
 		
 		else if(help.equalsIgnoreCase("description")||help.equalsIgnoreCase("desc")) {
+				
+				descV=true;
 			    String description = new HelpClass().description(a);
 			    System.out.println(description);
 			    System.out.println("\npress [enter] to continue ");

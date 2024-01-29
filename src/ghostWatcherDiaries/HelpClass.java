@@ -8,7 +8,7 @@ public class HelpClass {
 	
 
 	int a;
-	String desc;
+	String desc=" ";
 	String person;
 	String interact;
 	Scanner scanner=new Scanner(System.in);
@@ -22,6 +22,9 @@ public class HelpClass {
 	static Set<String> wordSet;
 	
 	static int c;
+	
+    boolean descriptionViewed = false;
+
 	
 	HelpClass(){
 		
@@ -63,6 +66,7 @@ public class HelpClass {
 		
 		this.a=a;
 		this.desc=desc;
+
 		
 		
 		if(a==1) {
@@ -84,6 +88,8 @@ public class HelpClass {
 			
 		}
 		
+		
+
 		
 		c=a;
 		
@@ -144,8 +150,15 @@ public class HelpClass {
 		
 		
 //		if(a==1) {
+		
+		if (new Main().descV==false) {
+            System.out.println("Make sure you have viewed the entire room first.");
+            return;
+		}
+	
+	
+		else {
 			System.out.println("Talk to...");
-			
 			description(c);
 			for(int i=0;i<descArray.length;i++) {
 				
@@ -170,6 +183,10 @@ public class HelpClass {
 					}	
 				}
 			
+		}
+			
+	
+		
 			
 			
 //		}
@@ -180,10 +197,17 @@ public class HelpClass {
 		int talkIndex=1;
 		this.a=a;
 		
+		if (new Main().descV==false) {
+            System.out.println("Make sure you have viewed the entire room first.");
+            return;
+		}
+		
 		
 //		if(a==1) {
-			System.out.println("Interact with...");
+//		if(!(desc.equalsIgnoreCase(" "))) {
 			
+		else {
+			System.out.println("Interact with...");
 			description(c);
 			for(int i=0;i<descArray.length;i++) {
 				
@@ -208,9 +232,18 @@ public class HelpClass {
 					}	
 				}
 			
+		}
 			
-			
+//	}
+		
+//		else if((desc.equalsIgnoreCase(" "))) {
+//			
+//			System.out.println("You should probably learn what's in the room first.");
+//			
 //		}
+		
+			
+		
 	
 	}
 	
