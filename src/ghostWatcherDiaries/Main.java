@@ -18,6 +18,8 @@ public class Main implements Runnable{
 	static int age;
 	static String gender;
 	static BartleyDialogues bd=new BartleyDialogues();
+	static JoeyDialogues jd=new JoeyDialogues();
+
 	
 
 	static int DialogueIndex=1;
@@ -282,6 +284,16 @@ public class Main implements Runnable{
 				
 			
 			}
+			if(talkTo.equalsIgnoreCase("Joey")) {
+				
+				
+				
+				
+				talkToJoey();
+				
+				
+			
+			}
 			
 			
 			
@@ -380,6 +392,32 @@ public class Main implements Runnable{
 				
 			}
 		}while((choose!=5));
+		
+		
+		
+	}
+public static void talkToJoey() {
+		
+		do {
+			
+			try {
+				jd.questions(DialogueIndex);
+				System.out.println();
+				System.out.print(greenLine+">>> ");
+				choose=scanner.nextInt();
+				scanner.nextLine();
+				System.out.println(resetColor);
+				jd.answers(DialogueIndex, choose);
+			}catch(InputMismatchException e) {
+				
+				System.out.println(redLine+"[Enter numbers only]"+resetColor);
+				
+				scanner.nextLine();
+				
+				
+				
+			}
+		}while((choose!=3));
 		
 		
 		
