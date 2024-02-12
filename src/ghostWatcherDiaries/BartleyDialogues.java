@@ -24,6 +24,9 @@ public class BartleyDialogues {
 							,"[EXIT]"};
 			
 			
+				
+			
+			
 			for(String s:dlg) {
 				
 				System.out.println(i+". "+s);
@@ -69,6 +72,7 @@ public class BartleyDialogues {
 			if(choice==1) {
 				
 				System.out.println("As i said I am bartley.");
+				
 			}
 			
 			if(choice==2) {

@@ -21,6 +21,7 @@ public class Main implements Runnable{
 	static JoeyDialogues jd=new JoeyDialogues();
 
 	
+	static boolean enableNames=false;
 
 	static int DialogueIndex=1;
 	static int choose = 0;
@@ -249,6 +250,7 @@ public class Main implements Runnable{
 		else if(help.equalsIgnoreCase("description")||help.equalsIgnoreCase("desc")) {
 				
 				descV=true;
+				enableNames=true;
 			    String description = new HelpClass().description(a);
 			    System.out.println(description);
 			    System.out.println("\npress [enter] to continue ");
@@ -274,7 +276,7 @@ public class Main implements Runnable{
 			System.out.println(resetColor);
 
 			
-			if(talkTo.equalsIgnoreCase("Bartley")) {
+			if(talkTo.equalsIgnoreCase("Bartley")&& enableNames==true) {
 			
 			
 			
@@ -284,7 +286,7 @@ public class Main implements Runnable{
 				
 			
 			}
-			if(talkTo.equalsIgnoreCase("Joey")) {
+			if(talkTo.equalsIgnoreCase("Joey")&& enableNames==true) {
 				
 				
 				
