@@ -152,7 +152,7 @@ public class HelpClass {
 //		if(a==1) {
 		
 		if (new Main().descV==false) {
-            System.out.println("Make sure you have viewed the entire room first.");
+            System.out.println("Make sure you have viewed the entire room first.\nEnter [ANY BUTTON] to go back.");
             return;
 		}
 	
@@ -198,8 +198,9 @@ public class HelpClass {
 		this.a=a;
 		
 		if (new Main().descV==false) {
-            System.out.println("Make sure you have viewed the entire room first.");
-            return;
+			System.out.println("Make sure you have viewed the entire room first.\nEnter [ANY BUTTON] to go back.");
+			
+			return;
 		}
 		
 		
